@@ -1,0 +1,38 @@
+{
+    "caption": "Merge fields from JSON",
+    "fields": {
+        "AAZ": {
+            "caption": "JSON",
+            "doc": "This field accepts a JSON structure containing the merge tags and their corresponding values. The JSON should be in the format {\"tag1\": \"value1\", \"tag2\": \"value2\", ...}.",
+            "editor": "DynamicValue",
+            "name": "JSON",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAa": {
+            "caption": "String",
+            "doc": "This field accepts the input string where the merge tags need to be replaced with their corresponding values. The format of the tags should match the defined tag format.",
+            "editor": "DynamicValue",
+            "name": "String",
+            "rank": 1,
+            "value": "text"
+        },
+        "AAb": {
+            "caption": "Tag format",
+            "default_val": "{{tag}}",
+            "doc": "This field allows users to specify the format of the merge tags. It should include the placeholder merge_tag, which will be replaced with actual tag names from the JSON structure. The placeholder can be wrapped in any delimiters, such as {{tag}}, <tag>, or <<tag>>. If you set a custom tag format, be sure to use lowercase letters for \"tag.\" If you are trying to perform a find and replace where there are no merge tags, set this field to \"tag\" (without the quotation marks).",
+            "editor": "StaticText",
+            "name": "tag_format",
+            "rank": 2
+        },
+        "AAc": {
+            "caption": "replace_missing_with_empty",
+            "default_val": true,
+            "doc": "When yes, this replaces merge tags not included in the JSON with an empty string. When no, it will leave unused merge tags in the resulting string.",
+            "editor": "DynamicValue",
+            "name": "replace_missing_with_empty",
+            "rank": 3,
+            "value": "boolean"
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "categories": {
+        "0": "technical",
+        "1": "data (things)"
+    },
+    "description": "This plugin allows you to take a string containing placeholders (eg. {{merge tags}}) and replace these placeholders with corresponding values from a provided JSON object. It also includes the ability to remove unused merge fields from a string. This is very useful for AI prompt templates, emails, or user personalization.\n\n",
+    "image": "//meta-q.cdn.bubble.io/f1721683011483x246381547293267550/icons8-placeholder-thumbnail-json-96.png",
+    "license": "open_source",
+    "link": "https://noblemen.com",
+    "name": "JSON Merge Fields (Find & Replace)",
+    "plugin_instructions": "Client-side element usage:\n1. Drag 'JSON Merge Fields' element onto the page and ensure it is visible\n2. Set element properties (JSON, input string, tag format)\n3. Access output from the element's 'output' state\n\nClient-side workflow usage:\n1. Ensure the 'JSON Merge Fields' element is on the page and visible\n2. Add a 'Merge fields from JSON' workflow action\n2. Set workflow properties (JSON, input string, tag format)\n3. Access output from the element's 'workflow output' state\n\nServer-side workflow usage:\n1. Add a 'Merge fields from JSON (SSA)' workflow action\n2. Set workflow properties (JSON, input string, tag format)\n3. Access output from the workflow action's 'Result of step X's output' state",
+    "sa_node_version": 18
+}

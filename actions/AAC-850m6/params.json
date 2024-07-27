@@ -1,0 +1,66 @@
+{
+    "category": "plugins",
+    "display": "Merge fields from JSON (SSA)",
+    "fields": {
+        "AAD": {
+            "caption": "Merge tags as JSON",
+            "default_val": "{\"name\": \"AJ\", \"date\": \"2024-06-27\", \"location\": \"New York\"}",
+            "doc": "This field accepts a JSON structure containing the merge tags and their corresponding values. The JSON should be in the format {\"tag1\": \"value1\", \"tag2\": \"value2\", ...}.",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "json_structure",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAE": {
+            "caption": "String to merge values",
+            "default_val": "Hello {{name}}, your appointment is on {{date}} in {{location}}.",
+            "doc": "This field accepts the input string where the merge tags need to be replaced with their corresponding values. The format of the tags should match the user-defined tag format.",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "input_string",
+            "rank": 1,
+            "value": "text"
+        },
+        "AAH": {
+            "caption": "tag_format",
+            "default_val": "{{tag}}",
+            "doc": "This field allows users to specify the format of the merge tags. It should include the placeholder merge_tag, which will be replaced with actual tag names from the JSON structure. The placeholder can be wrapped in any delimiters, such as {{tag}}, <tag>, or <<tag>>. If you set a custom tag format, be sure to use lowercase letters for \"tag.\" If you are trying to perform a find and replace where there are no merge tags, set this field to \"tag\" (without the quotation marks).",
+            "editor": "DynamicValue",
+            "name": "tag_format",
+            "rank": 2,
+            "value": "text"
+        },
+        "AAR": {
+            "caption": "Replace missing with empty",
+            "default_val": true,
+            "doc": "When checked, this replaces merge tags not included in the JSON with an empty string. When unchecked, it will leave unused merge tags in the resulting string.",
+            "editor": "DynamicValue",
+            "name": "replace_missing_with_empty",
+            "rank": 3,
+            "value": "boolean"
+        }
+    },
+    "return_value": {
+        "AAF": {
+            "caption": "result",
+            "name": "merged_string",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAG": {
+            "caption": "error",
+            "name": "error",
+            "rank": 1,
+            "value": "text"
+        },
+        "AAS": {
+            "caption": "Missing values",
+            "is_list": true,
+            "name": "missing_merge_fields",
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "type": "server_side"
+}
